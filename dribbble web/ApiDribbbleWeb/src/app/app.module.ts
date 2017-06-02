@@ -22,6 +22,7 @@ import { DetailShotsComponent } from './detail-shots/detail-shots.component';
 
 // my services
 import { DribbbleServiceService } from "app/providers/dribbble-service.service";
+import { SimpleImageComponent } from './shared/simple-image/simple-image.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DribbbleServiceService } from "app/providers/dribbble-service.service";
     PersonalCardComponent,
     SimpleCardComponent,
     ProfileComponent,
-    DetailShotsComponent
+    DetailShotsComponent,
+    SimpleImageComponent
   ],
   imports: [
     BrowserModule,
