@@ -1,0 +1,11 @@
+<div *ngIf="show">
+    <personal-card [profile]="userProfile"></personal-card>
+</div>
+
+<div *ngIf="show">
+    <div *ngFor="let item of userShots">
+        <simple-card [shots]="item"></simple-card>
+    </div>
+</div>
+
+<img src="src/assets/image/200w_d.gif" *ngIf="!show">

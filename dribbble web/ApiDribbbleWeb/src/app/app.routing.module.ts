@@ -2,11 +2,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { HomeComponent } from "app/home/home.component";
+import { PersonalCardComponent } from "app/shared/personal-card/personal-card.component";
+import { SimpleCardComponent } from "app/shared/simple-card/simple-card.component";
+import { ProfileComponent } from "app/profile/profile.component";
 
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },];
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: 'home', component: HomeComponent },
+    { path: 'personal', component: PersonalCardComponent },
+    {path: 'simple', component: SimpleCardComponent},
+    {path: 'profile/:id', component: ProfileComponent}];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

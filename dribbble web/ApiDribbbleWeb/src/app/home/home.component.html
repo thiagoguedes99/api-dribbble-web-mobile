@@ -2,8 +2,7 @@
 <hr>
 <br>
 
-<div class="container">
-    <card-home class="ml-4 my-3 float-left col-sm-5 col-lg-3">
+<div *ngFor="let item of listShots">
+    <card-home [shot]="item">
     </card-home>
-
 </div>

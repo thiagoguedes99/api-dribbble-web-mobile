@@ -1,0 +1,44 @@
+<!-- div class="d-flex row float-left">
+    <div class="d-flex justify-content-center">
+        <div class="col-10 col-sm-8 col-md-2" -->
+<div class="container">
+
+    <div class="justify-content-center">
+        <div class="col-10 col-sm-8 col-md-4 float-left">
+            <div class="card card-blog">
+                <img class="card-image" src="{{shot.images.hidpi}}" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">{{shot.title}}</h4>
+                    <p class="card-text">{{shot.description}}</p>
+
+                    <div class="ftr">
+                        <!-- a (click)="goToProfile()" -->
+                        <a [routerLink]="['/profile', shot.user.id ]">
+                            <div class=" author ">
+                                <img src="{{shot.user.avatar_url}} " class="avatar img-raised ">
+                                <span>{{shot.user.name}}</span>
+                            </div>
+                        </a>
+
+                        <div class="stats ">
+                            <i class="fa fa-eye "></i> {{shot.views_count }}
+                            <i class="fa fa-comment ml-2 "></i> {{shot.comments_count }}
+                            <i class="fa fa-heart ml-2 "></i> {{shot.likes_count }}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- /div>
+    </div>
+</div -->
+
+<!--  align-self-center  align-items-center justify-content-center  -->
