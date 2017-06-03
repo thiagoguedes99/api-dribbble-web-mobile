@@ -1,0 +1,31 @@
+<!-- div class="col-4" -->
+<div class="card">
+    <div class="row">
+        <div class="col-sm-6 col-md-6">
+            <img src="src/assets/image/capa-do-livro.jpg" class="foto" alt="">
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+            <h4 class="card-title">meu nome</h4>
+            <p class="locality">minha cidade <i class="fa fa-map-marker" aria-hidden="true"></i></p>
+
+            <a href="{{profile?.links?.web}}" target="_blank">
+                <!-- *ngIf="profile?.links?.web" -->
+                <div class="row margin-row-www">
+                    <img src="src/assets/image/site.png" class="avatar img-raised">
+                    <span class="text-vertical-center">web site</span>
+                </div>
+            </a>
+
+            <a href="{{profile?.links?.twitter}}" target="_blank">
+                <!--  *ngIf="profile?.links?.twitter" -->
+                <div class="row">
+                    <img src="src/assets/image/twitter.png" class="avatar img-raised">
+                    <span class="text-vertical-center">twitter</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+<!-- /div -->

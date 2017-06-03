@@ -26,4 +26,12 @@ export class EndPoints {
         return `${this.URL}users/${id}/shots${this.getAccessToken()}`;
     }
 
+    protected getShotsComents(idComents: string): string {
+        return `${this.URL}shots/${idComents}/comments${this.ACCESS_TOKEN}`;
+    }
+
+    protected getShotsLikes(idComents: string): string {
+        return `${this.URL}shots/${idComents}/likes${this.ACCESS_TOKEN}`;
+    }
+
 }
