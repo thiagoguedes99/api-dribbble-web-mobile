@@ -1,8 +1,16 @@
 <br>
-<hr>
 <br>
 
 <div *ngFor="let item of listShots">
-    <card-home [shot]="item">
-    </card-home>
+
+    <div class="container">
+        <div class="justify-content-center">
+            <div class="col-10 col-sm-8 col-md-4 float-left">
+
+                <card-home [shot]="item"></card-home>
+
+            </div>
+        </div>
+    </div>
+
 </div>
