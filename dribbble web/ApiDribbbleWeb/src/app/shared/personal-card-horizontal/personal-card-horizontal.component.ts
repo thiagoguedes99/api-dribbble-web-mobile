@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'personal-card-horizontal-component',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-card-horizontal.component.css']
 })
 export class PersonalCardHorizontalComponent implements OnInit {
+
+  @Input() user;
 
   constructor() { }
 

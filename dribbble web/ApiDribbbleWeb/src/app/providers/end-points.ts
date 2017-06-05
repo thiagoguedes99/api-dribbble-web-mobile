@@ -17,6 +17,10 @@ export class EndPoints {
         return `${this.URL}shots${this.getAccessToken()}`;
     }
 
+    protected getShortDetail(idShort: string) {
+        return `${this.URL}shots/${idShort}${this.getAccessToken()}`;
+    }
+
     protected getProfileUser(id: string): string {
         return `${this.URL}users/${id}${this.getAccessToken()}`;
 
@@ -27,11 +31,11 @@ export class EndPoints {
     }
 
     protected getShotsComents(idComents: string): string {
-        return `${this.URL}shots/${idComents}/comments${this.ACCESS_TOKEN}`;
+        return `${this.URL}shots/${idComents}/comments${this.getAccessToken()}`;
     }
 
     protected getShotsLikes(idComents: string): string {
-        return `${this.URL}shots/${idComents}/likes${this.ACCESS_TOKEN}`;
+        return `${this.URL}shots/${idComents}/likes${this.getAccessToken()}`;
     }
 
 }

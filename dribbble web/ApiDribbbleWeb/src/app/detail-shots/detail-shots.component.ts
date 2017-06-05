@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+
+import { DribbbleServiceService } from "app/providers/dribbble-service.service";
 
 @Component({
   selector: 'app-detail-shots',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailShotsComponent implements OnInit {
 
-  constructor() { }
+   private id: string;
+   private detailShort: any;
+   private coments: any;
+   private likes: any;
+
+  constructor(private url: ActivatedRoute, private service: DribbbleServiceService) { }
 
   ngOnInit() {
+    this.id = this.url.snapshot.params['id'];
+
+    this.service.getDetailShots(this.id).subscribe(res => {
+      this.detailShort = res;
+    console.log(this.detailShort)});
+
+    this.service.getComentsShots(this.id).subscribe(res => {
+      this.coments = res;
+    console.log(this.coments)});
+
+    this.service.getLikeShots(this.id).subscribe(res => {
+      this.likes = res;
+    console.log(this.likes)});
+
   }
+
 
 }

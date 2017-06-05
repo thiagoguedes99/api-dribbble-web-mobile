@@ -19,6 +19,21 @@ export class DribbbleServiceService extends EndPoints {
               .map(res => res.json());             
    }
 
+   getDetailShots(idShot: string) {
+     return this.http.get(this.getShortDetail(idShot))
+                     .map(res => res.json());
+   }
+
+   getComentsShots(idComents: string) {
+     return this.http.get(this.getShotsComents(idComents))
+                .map(res => res.json());
+   }
+
+   getLikeShots(idComents: string) {
+     return this.http.get(this.getShotsLikes(idComents))
+                     .map(res => res.json());
+   }
+
    getUserProfile(id: string) {
      return this.http.get(this.getProfileUser(id))
                 .map(res => res.json());
