@@ -14,6 +14,7 @@ export class DetailShotsComponent implements OnInit {
    private detailShort: any;
    private coments: any;
    private likes: any;
+   public show: boolean = false;
 
   constructor(private url: ActivatedRoute, private service: DribbbleServiceService) { }
 
@@ -22,7 +23,7 @@ export class DetailShotsComponent implements OnInit {
 
     this.service.getDetailShots(this.id).subscribe(res => {
       this.detailShort = res;
-    console.log(this.detailShort)});
+      this.show = true});
 
     this.service.getComentsShots(this.id).subscribe(res => {
       this.coments = res;

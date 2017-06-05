@@ -1,5 +1,7 @@
 <div class="card card-blog">
-    <img class="card-image" src="{{shots.images.hidpi}}" alt="Card image cap">
+    <div [routerLink]="['/detail', shots.id ]">
+        <img class="card-image" src="{{shots.images.hidpi}}" alt="Card image cap">
+    </div>
     <div class="card-block">
 
         <div class="stats col-12">

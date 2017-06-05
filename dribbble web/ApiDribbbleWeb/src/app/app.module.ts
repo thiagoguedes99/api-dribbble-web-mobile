@@ -26,6 +26,7 @@ import { PersonalCardHorizontalComponent } from "./shared/personal-card-horizont
 import { DribbbleServiceService } from "app/providers/dribbble-service.service";
 import { CollapseCardComponent } from './shared/collapse-card/collapse-card.component';
 import { AvatarComponent } from './shared/avatar/avatar.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AvatarComponent } from './shared/avatar/avatar.component';
     SimpleImageComponent,
     PersonalCardHorizontalComponent,
     CollapseCardComponent,
-    AvatarComponent
+    AvatarComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

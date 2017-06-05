@@ -14,9 +14,9 @@
                 <!--{{coments | json}}-->
                 <table class="table table-hover">
                     <tbody>
-                        <tr *ngFor="let item of coments">
+                        <tr *ngFor="let item of coments; index as i">
                             <!-- *ngFor="let item of items" -->
-                            <th scope="row">1</th>
+                            <th scope="row">{{i+1}}</th>
                             <td>
                                 <a [routerLink]="['/profile', item.user.id ]">
                                     <avatar [photo]="item.user.avatar_url" [name]="item.user.name"></avatar>
@@ -45,9 +45,9 @@
 
                 <table class="table table-hover">
                     <tbody>
-                        <tr *ngFor="let item of likes">
+                        <tr *ngFor="let item of likes; index as i">
                             <!-- *ngFor="let item of items" -->
-                            <th scope="row">1</th>
+                            <th scope="row">{{i}}</th>
                             <td>
                                 <a [routerLink]="['/profile', item.user.id ]">
                                     <avatar [photo]="item.user.avatar_url" [name]="item.user.name"></avatar>

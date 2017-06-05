@@ -10,14 +10,15 @@ import { DribbbleServiceService } from "app/providers/dribbble-service.service";
 export class HomeComponent implements OnInit {
 
   listShots: any[] = [];
+  public show: boolean = false;
 
   constructor(private service: DribbbleServiceService) { }
 
   ngOnInit() {
     this.service.getListShot()
                 .subscribe(resp =>{
-                   this.listShots = resp
-                   console.log(this.listShots)
+                   this.listShots = resp;
+                  this.show = true;
                 });
   }
 

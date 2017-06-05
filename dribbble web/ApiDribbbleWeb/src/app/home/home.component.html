@@ -1,16 +1,20 @@
 <br>
 <br>
 
-<div *ngFor="let item of listShots">
+<div *ngIf="show">
+    <div *ngFor="let item of listShots">
 
-    <div class="container">
-        <div class="justify-content-center">
-            <div class="col-10 col-sm-8 col-md-4 float-left">
+        <div class="container">
+            <div class="justify-content-center">
+                <div class="col-10 col-sm-8 col-md-4 float-left">
 
-                <card-home [shot]="item"></card-home>
+                    <card-home [shot]="item"></card-home>
 
+                </div>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>
+
+<loading [show]="show"></loading>
